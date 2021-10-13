@@ -1,0 +1,51 @@
+﻿@model JapaneseStudy.Models.Kanji
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Kanji</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KanjiChar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KanjiChar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Meanings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Meanings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Story)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Story)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Primative)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Primative)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsOnlyPrimative)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsOnlyPrimative)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

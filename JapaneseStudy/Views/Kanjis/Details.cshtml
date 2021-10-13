@@ -1,0 +1,48 @@
+﻿@model JapaneseStudy.Models.Kanji
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Kanji</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KanjiChar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KanjiChar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Meanings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Meanings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Story)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Story)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Primative)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Primative)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsOnlyPrimative)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsOnlyPrimative)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
